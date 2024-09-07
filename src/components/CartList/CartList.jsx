@@ -16,7 +16,7 @@ export const CartList = () => {
         {cartItems.map(({ id, price, quantity, name, image }) => (
           <View className="item" key={id}>
             <View className="image">
-              <img src={`src/assets/${image}`} />
+              <img src={`${image}`} />
             </View>
             <Text className="name">{name}</Text>
             <Text className="totalPrice">${price * quantity}</Text>

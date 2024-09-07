@@ -17,14 +17,18 @@ export const Detail = () => {
   const { id, name, image, price, description } = product;
 
   console.log('cartItems', cartItems);
-  console.log('ProductId', id, cartItems.filter((item) => item.id === id).length > 0);
+  console.log(
+    'ProductId',
+    id,
+    cartItems.filter((item) => item.id === id).length > 0
+  );
 
   return (
     <View attrs={{ id }}>
       <div className="title">PRODUCT DETAIL</div>
       <div className="detail">
         <div className="image">
-          <img src={`src/assets/${image}`} alt={`${name}`} />
+          <img src={`${image}`} alt={`${name}`} />
         </div>
         <div className="content">
           <Text tag="h3" className="name">

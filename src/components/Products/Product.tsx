@@ -17,7 +17,7 @@ export const Products = () => {
       {products.map((p) => (
         <View className="item" key={p.id}>
           <Clickable tag="a" onClick={() => setProduct(p)}>
-            <img src={`src/assets/${p.image}`} alt={`${p.name}`} />
+            <img src={`${p.image}`} alt={`${p.name}`} />
           </Clickable>
           <Text tag="h2">${p.name}</Text>
           <View className="price">$${p.price}</View>
