@@ -1,0 +1,153 @@
+@import './styles';
+
+body {
+  margin: 0;
+  font-family: Poppins;
+}
+
+svg,
+span > svg {
+  width: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: $gray;
+}
+
+button,
+a,
+svg {
+  cursor: pointer;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+  max-width: 90vw;
+  text-align: center;
+  padding-top: 10px;
+  transition: 0.5s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+
+  .title {
+    font-size: xx-large;
+  }
+
+  .icon-cart {
+    position: relative;
+  }
+
+  .icon-cart span {
+    position: absolute;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: 50%;
+    right: -20px;
+  }
+}
+
+.cartTab {
+  right: -400px;
+  transition: 0.5s;
+
+  width: 400px;
+  max-width: 100%;
+  background-color: #353432;
+  color: #eee;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  bottom: 0;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+
+  h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  button {
+    background-color: #e8bc0e;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .close {
+    background-color: #eee;
+  }
+
+  // &.activeTabCart {
+  //   body .cartTab{
+  //     right: 0;
+  //   }
+  //   body .container{
+  //     transform: translateX(-250px);
+  //   }
+  // }
+}
+
+// .activeTabCart ~ .container {
+//   transform: translateX(-250px); /* Apply transformation to .container */
+// }
+
+.listCart {
+  overflow: auto;
+}
+.listCart::-webkit-scrollbar {
+  width: 0;
+}
+
+.listCart .item img {
+  width: 100%;
+}
+.listCart .item {
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+.listCart .quantity span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  color: #555;
+  cursor: pointer;
+}
+.listCart .quantity span:nth-child(2) {
+  background-color: transparent;
+  color: #eee;
+  cursor: auto;
+}
+.listCart .quantity {
+  display: flex;
+  justify-content: center;
+}
+.listCart .item:nth-child(even) {
+  background-color: #eee1;
+}
